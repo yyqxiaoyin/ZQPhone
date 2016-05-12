@@ -9,7 +9,7 @@
 #import "YQBaseViewController.h"
 #import "ZQGameModel.h"
 
-@interface GameDetailController : YQBaseViewController
+@interface GameDetailController :YQBaseCollectionViewController
 
 @property (nonatomic ,strong)ZQGameModel *model;
 

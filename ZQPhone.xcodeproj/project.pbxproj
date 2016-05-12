@@ -30,6 +30,10 @@
 		268E49F61CE172F500679C13 /* HomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E49F51CE172F500679C13 /* HomePageController.m */; };
 		268E49F91CE1730E00679C13 /* LiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E49F81CE1730E00679C13 /* LiveController.m */; };
 		268E49FC1CE1732900679C13 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E49FB1CE1732900679C13 /* GameController.m */; };
+		26E5D33B1CE4636400B68936 /* YQBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D33A1CE4636400B68936 /* YQBaseCollectionViewController.m */; };
+		26E5D33E1CE4662A00B68936 /* YQBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D33D1CE4662A00B68936 /* YQBaseCollectionViewCell.m */; };
+		26E5D3411CE46CCA00B68936 /* ZQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D3401CE46CCA00B68936 /* ZQBaseModel.m */; };
+		26E5D3441CE46EC300B68936 /* ZQHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D3431CE46EC300B68936 /* ZQHomeListModel.m */; };
 		26EEEA631CE30185006D1FED /* YQBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEEA621CE30185006D1FED /* YQBannerController.m */; };
 		26EEEA661CE32113006D1FED /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEEA651CE32113006D1FED /* BannerModel.m */; };
 		26FD5C641CE177E500FEFFD6 /* ZQGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD5C631CE177E500FEFFD6 /* ZQGameModel.m */; };
@@ -101,6 +105,14 @@
 		268E49F81CE1730E00679C13 /* LiveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveController.m; sourceTree = "<group>"; };
 		268E49FA1CE1732900679C13 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		268E49FB1CE1732900679C13 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		26E5D3391CE4636400B68936 /* YQBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQBaseCollectionViewController.h; sourceTree = "<group>"; };
+		26E5D33A1CE4636400B68936 /* YQBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQBaseCollectionViewController.m; sourceTree = "<group>"; };
+		26E5D33C1CE4662A00B68936 /* YQBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		26E5D33D1CE4662A00B68936 /* YQBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		26E5D33F1CE46CCA00B68936 /* ZQBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZQBaseModel.h; path = Demo/Class/Main/View/ZQBaseModel.h; sourceTree = SOURCE_ROOT; };
+		26E5D3401CE46CCA00B68936 /* ZQBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZQBaseModel.m; path = Demo/Class/Main/View/ZQBaseModel.m; sourceTree = SOURCE_ROOT; };
+		26E5D3421CE46EC300B68936 /* ZQHomeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQHomeListModel.h; sourceTree = "<group>"; };
+		26E5D3431CE46EC300B68936 /* ZQHomeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQHomeListModel.m; sourceTree = "<group>"; };
 		26EEEA611CE30185006D1FED /* YQBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQBannerController.h; sourceTree = "<group>"; };
 		26EEEA621CE30185006D1FED /* YQBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQBannerController.m; sourceTree = "<group>"; };
 		26EEEA641CE32113006D1FED /* BannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
@@ -243,6 +255,8 @@
 			children = (
 				26EEEA641CE32113006D1FED /* BannerModel.h */,
 				26EEEA651CE32113006D1FED /* BannerModel.m */,
+				26E5D3421CE46EC300B68936 /* ZQHomeListModel.h */,
+				26E5D3431CE46EC300B68936 /* ZQHomeListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +434,8 @@
 				26064EFE1CD344AF0089DB98 /* YQBaseNavigationController.m */,
 				26064F001CD344CA0089DB98 /* YQBaseViewController.h */,
 				26064F011CD344CA0089DB98 /* YQBaseViewController.m */,
+				26E5D3391CE4636400B68936 /* YQBaseCollectionViewController.h */,
+				26E5D33A1CE4636400B68936 /* YQBaseCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,6 +443,8 @@
 		26064EF81CD344670089DB98 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				26E5D33F1CE46CCA00B68936 /* ZQBaseModel.h */,
+				26E5D3401CE46CCA00B68936 /* ZQBaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,6 +455,8 @@
 				266332BE1CE2C60000A3CDF2 /* WMPlayer */,
 				266332B71CE2BAC200A3CDF2 /* ZQPlayerView.h */,
 				266332B81CE2BAC200A3CDF2 /* ZQPlayerView.m */,
+				26E5D33C1CE4662A00B68936 /* YQBaseCollectionViewCell.h */,
+				26E5D33D1CE4662A00B68936 /* YQBaseCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,6 +708,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E5D33B1CE4636400B68936 /* YQBaseCollectionViewController.m in Sources */,
+				26E5D33E1CE4662A00B68936 /* YQBaseCollectionViewCell.m in Sources */,
 				260B88141CE18DEE00771CA7 /* ZQHttpTool.m in Sources */,
 				268E49F61CE172F500679C13 /* HomePageController.m in Sources */,
 				260B88171CE19EA100771CA7 /* ZQGameCell.m in Sources */,
@@ -705,10 +727,12 @@
 				26FD5C681CE187EA00FEFFD6 /* AppDelegate.m in Sources */,
 				268E49FC1CE1732900679C13 /* GameController.m in Sources */,
 				260B88261CE1AEB400771CA7 /* GameDetailController.m in Sources */,
+				26E5D3441CE46EC300B68936 /* ZQHomeListModel.m in Sources */,
 				260B88201CE1AA0800771CA7 /* ZQGameDetailModel.m in Sources */,
 				26FD5C641CE177E500FEFFD6 /* ZQGameModel.m in Sources */,
 				26EEEA661CE32113006D1FED /* BannerModel.m in Sources */,
 				26064E9A1CD33E390089DB98 /* main.m in Sources */,
+				26E5D3411CE46CCA00B68936 /* ZQBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

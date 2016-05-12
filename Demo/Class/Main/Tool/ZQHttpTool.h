@@ -33,4 +33,9 @@ typedef void (^httpRequestFailure)(ZQHttpTool *manager,NSError *error);
  */
 -(void)getGameDetailDataWithGameID:(NSString *)gameID Succesed:(httpRequestSuccess)success faild:(httpRequestFailure)failure;
 
+/**
+ *  获取首页列表数据
+ */
+-(void)getHomeListDataWithSuccesed:(httpRequestSuccess)success faild:(httpRequestFailure)failure;
+
 @end

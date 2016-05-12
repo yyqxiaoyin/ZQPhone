@@ -20,3 +20,6 @@
 
 //首页广告地址
 #define BANNER_URL @"http://www.zhanqi.tv/api/touch/apps.banner?rand=1462938023665"
+
+//首页列表地址
+#define HOME_LIST_URL @"http://www.zhanqi.tv/api/static/live.index/recommend-apps.json?"

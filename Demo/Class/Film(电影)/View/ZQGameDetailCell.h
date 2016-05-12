@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZQGameDetailModel.h"
 
-@interface ZQGameDetailCell : UICollectionViewCell
+@interface ZQGameDetailCell : YQBaseCollectionViewCell
 
--(void)fillCellWithZQGameDetailModel:(ZQGameDetailModel *)model;
+
 
 @end

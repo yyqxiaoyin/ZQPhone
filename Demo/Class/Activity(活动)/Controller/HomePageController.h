@@ -8,6 +8,6 @@
 
 #import "YQBaseViewController.h"
 
-@interface HomePageController : YQBaseViewController
+@interface HomePageController : YQBaseCollectionViewController
 
 @end

@@ -90,5 +90,23 @@ typedef void (^httpRequestFailure)(ZQHttpTool *manager,NSError *error);
     
 }
 
+-(void)getHomeListDataWithSuccesed:(httpRequestSuccess)success faild:(httpRequestFailure)failure{
+
+    [[self AFNManager] GET:HOME_LIST_URL
+                parameters:nil
+                  progress:^(NSProgress * _Nonnull downloadProgress) {
+                      
+                      
+                      
+                  } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                      
+                      success(self,responseObject);
+                      
+                  } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                      
+                      failure(self,error);
+                  }];
+}
+
 
 @end

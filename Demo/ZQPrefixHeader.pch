@@ -23,6 +23,8 @@
 #import <Masonry.h>
 #import "ZQHttpTool.h"
 #import "ZQPlayerView.h"
+#import "YQBaseCollectionViewController.h"
+#import "YQBaseCollectionViewCell.h"
 
 //导航栏高度
 #define DSNavigationHeight CGRectGetMaxY([self.navigationController navigationBar].frame)
