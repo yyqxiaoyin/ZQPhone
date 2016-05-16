@@ -34,8 +34,12 @@
 		26E5D33E1CE4662A00B68936 /* YQBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D33D1CE4662A00B68936 /* YQBaseCollectionViewCell.m */; };
 		26E5D3411CE46CCA00B68936 /* ZQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D3401CE46CCA00B68936 /* ZQBaseModel.m */; };
 		26E5D3441CE46EC300B68936 /* ZQHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E5D3431CE46EC300B68936 /* ZQHomeListModel.m */; };
-		26EEEA631CE30185006D1FED /* YQBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEEA621CE30185006D1FED /* YQBannerController.m */; };
 		26EEEA661CE32113006D1FED /* BannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEEA651CE32113006D1FED /* BannerModel.m */; };
+		26FD1D161CE9651C001BC3C9 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD1D151CE9651C001BC3C9 /* SectionHeaderView.m */; };
+		26FD1D281CE97B7D001BC3C9 /* TTLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD1D231CE97B7D001BC3C9 /* TTLoopView.m */; };
+		26FD1D291CE97B7D001BC3C9 /* TTLoopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD1D251CE97B7D001BC3C9 /* TTLoopViewCell.m */; };
+		26FD1D2A1CE97B7D001BC3C9 /* TTLoopViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD1D271CE97B7D001BC3C9 /* TTLoopViewFlowLayout.m */; };
+		26FD1D2D1CE97B9F001BC3C9 /* BannerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD1D2C1CE97B9F001BC3C9 /* BannerHeaderView.m */; };
 		26FD5C641CE177E500FEFFD6 /* ZQGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD5C631CE177E500FEFFD6 /* ZQGameModel.m */; };
 		26FD5C681CE187EA00FEFFD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FD5C671CE187EA00FEFFD6 /* AppDelegate.m */; };
 		C35FBF575EC7094CA4C4CCB0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D7D4A7D5E86EBB05A8C137 /* libPods.a */; };
@@ -113,10 +117,18 @@
 		26E5D3401CE46CCA00B68936 /* ZQBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZQBaseModel.m; path = Demo/Class/Main/View/ZQBaseModel.m; sourceTree = SOURCE_ROOT; };
 		26E5D3421CE46EC300B68936 /* ZQHomeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQHomeListModel.h; sourceTree = "<group>"; };
 		26E5D3431CE46EC300B68936 /* ZQHomeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQHomeListModel.m; sourceTree = "<group>"; };
-		26EEEA611CE30185006D1FED /* YQBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQBannerController.h; sourceTree = "<group>"; };
-		26EEEA621CE30185006D1FED /* YQBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQBannerController.m; sourceTree = "<group>"; };
 		26EEEA641CE32113006D1FED /* BannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerModel.h; sourceTree = "<group>"; };
 		26EEEA651CE32113006D1FED /* BannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerModel.m; sourceTree = "<group>"; };
+		26FD1D141CE9651C001BC3C9 /* SectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderView.h; sourceTree = "<group>"; };
+		26FD1D151CE9651C001BC3C9 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
+		26FD1D221CE97B7D001BC3C9 /* TTLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoopView.h; sourceTree = "<group>"; };
+		26FD1D231CE97B7D001BC3C9 /* TTLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoopView.m; sourceTree = "<group>"; };
+		26FD1D241CE97B7D001BC3C9 /* TTLoopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoopViewCell.h; sourceTree = "<group>"; };
+		26FD1D251CE97B7D001BC3C9 /* TTLoopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoopViewCell.m; sourceTree = "<group>"; };
+		26FD1D261CE97B7D001BC3C9 /* TTLoopViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoopViewFlowLayout.h; sourceTree = "<group>"; };
+		26FD1D271CE97B7D001BC3C9 /* TTLoopViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoopViewFlowLayout.m; sourceTree = "<group>"; };
+		26FD1D2B1CE97B9F001BC3C9 /* BannerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerHeaderView.h; sourceTree = "<group>"; };
+		26FD1D2C1CE97B9F001BC3C9 /* BannerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerHeaderView.m; sourceTree = "<group>"; };
 		26FD5C621CE177E500FEFFD6 /* ZQGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQGameModel.h; sourceTree = "<group>"; };
 		26FD5C631CE177E500FEFFD6 /* ZQGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQGameModel.m; sourceTree = "<group>"; };
 		26FD5C661CE187EA00FEFFD6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -264,7 +276,11 @@
 		26064ED21CD33F320089DB98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				26EEEA541CE2E4B4006D1FED /* BannerView */,
+				26FD1D211CE97B7D001BC3C9 /* TTLoopView */,
+				26FD1D141CE9651C001BC3C9 /* SectionHeaderView.h */,
+				26FD1D151CE9651C001BC3C9 /* SectionHeaderView.m */,
+				26FD1D2B1CE97B9F001BC3C9 /* BannerHeaderView.h */,
+				26FD1D2C1CE97B9F001BC3C9 /* BannerHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,13 +506,17 @@
 			path = WMPlayer;
 			sourceTree = "<group>";
 		};
-		26EEEA541CE2E4B4006D1FED /* BannerView */ = {
+		26FD1D211CE97B7D001BC3C9 /* TTLoopView */ = {
 			isa = PBXGroup;
 			children = (
-				26EEEA611CE30185006D1FED /* YQBannerController.h */,
-				26EEEA621CE30185006D1FED /* YQBannerController.m */,
+				26FD1D221CE97B7D001BC3C9 /* TTLoopView.h */,
+				26FD1D231CE97B7D001BC3C9 /* TTLoopView.m */,
+				26FD1D241CE97B7D001BC3C9 /* TTLoopViewCell.h */,
+				26FD1D251CE97B7D001BC3C9 /* TTLoopViewCell.m */,
+				26FD1D261CE97B7D001BC3C9 /* TTLoopViewFlowLayout.h */,
+				26FD1D271CE97B7D001BC3C9 /* TTLoopViewFlowLayout.m */,
 			);
-			path = BannerView;
+			path = TTLoopView;
 			sourceTree = "<group>";
 		};
 		26FD5C651CE187EA00FEFFD6 /* Other */ = {
@@ -709,17 +729,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E5D33B1CE4636400B68936 /* YQBaseCollectionViewController.m in Sources */,
+				26FD1D2D1CE97B9F001BC3C9 /* BannerHeaderView.m in Sources */,
 				26E5D33E1CE4662A00B68936 /* YQBaseCollectionViewCell.m in Sources */,
 				260B88141CE18DEE00771CA7 /* ZQHttpTool.m in Sources */,
+				26FD1D161CE9651C001BC3C9 /* SectionHeaderView.m in Sources */,
 				268E49F61CE172F500679C13 /* HomePageController.m in Sources */,
 				260B88171CE19EA100771CA7 /* ZQGameCell.m in Sources */,
 				26064F1B1CD3469D0089DB98 /* CustumTbarController.m in Sources */,
 				260B88231CE1ABC400771CA7 /* ZQGameDetailCell.m in Sources */,
 				26064F021CD344CA0089DB98 /* YQBaseViewController.m in Sources */,
 				266332E41CE2C60000A3CDF2 /* WMPlayer.m in Sources */,
-				26EEEA631CE30185006D1FED /* YQBannerController.m in Sources */,
 				26064EFF1CD344AF0089DB98 /* YQBaseNavigationController.m in Sources */,
 				266332BD1CE2BC2600A3CDF2 /* ZQLiveRoomController.m in Sources */,
+				26FD1D281CE97B7D001BC3C9 /* TTLoopView.m in Sources */,
 				268E49F91CE1730E00679C13 /* LiveController.m in Sources */,
 				26064F151CD346280089DB98 /* MeController.m in Sources */,
 				26064F181CD346380089DB98 /* ShopController.m in Sources */,
@@ -727,8 +749,10 @@
 				26FD5C681CE187EA00FEFFD6 /* AppDelegate.m in Sources */,
 				268E49FC1CE1732900679C13 /* GameController.m in Sources */,
 				260B88261CE1AEB400771CA7 /* GameDetailController.m in Sources */,
+				26FD1D2A1CE97B7D001BC3C9 /* TTLoopViewFlowLayout.m in Sources */,
 				26E5D3441CE46EC300B68936 /* ZQHomeListModel.m in Sources */,
 				260B88201CE1AA0800771CA7 /* ZQGameDetailModel.m in Sources */,
+				26FD1D291CE97B7D001BC3C9 /* TTLoopViewCell.m in Sources */,
 				26FD5C641CE177E500FEFFD6 /* ZQGameModel.m in Sources */,
 				26EEEA661CE32113006D1FED /* BannerModel.m in Sources */,
 				26064E9A1CD33E390089DB98 /* main.m in Sources */,

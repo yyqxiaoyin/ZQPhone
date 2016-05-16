@@ -64,7 +64,7 @@
  */
 -(void)addChildVC:(UIViewController *)childVc title:(NSString *)title imageName:(NSString *)imageName selectImageName:(NSString *)selectedImageName{
     
-    childVc.title = title;
+    childVc.tabBarItem.title = title;
     childVc.view.backgroundColor = [UIColor whiteColor];
     
     //    设置图标
@@ -79,7 +79,6 @@
     childVc.tabBarItem.selectedImage = selectedImage;
     
     YQBaseNavigationController *nav = [[YQBaseNavigationController alloc]initWithRootViewController:childVc];
-    
     
     UIColor *titleNomalColor = [UIColor lightGrayColor];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
