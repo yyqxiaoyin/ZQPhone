@@ -12,5 +12,8 @@
 
 @end
 
+@implementation Room
+
+@end
 
 

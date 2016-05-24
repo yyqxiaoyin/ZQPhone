@@ -11,20 +11,17 @@
 #import "ZQHomeListModel.h"
 #import "SectionHeaderView.h"
 #import "BannerHeaderView.h"
+#import "ZQLiveRoomController.h"
 
 
 #define IDENTIFIER_HEADERSECTION @"homeMenuHeaderSection"
 #define IDENTIFIER_BANNERSECTION @"bannerHeaderSection"
 
-@interface HomePageController ()
-
-@property (nonatomic ,strong)NSMutableArray *banners;
+@interface HomePageController ()<SectionHeaderViewDelegate>
 
 @property (nonatomic ,strong)NSMutableArray *headerViewTitles;
 
-@property (nonatomic ,strong)NSMutableArray *bannerTitles;
-
-@property (nonatomic ,strong)NSMutableArray *bannerImages;
+@property (nonatomic ,strong)NSMutableArray *bannerModels;
 
 @end
 
@@ -38,6 +35,14 @@
     
     return _headerViewTitles;
 }
+-(NSMutableArray *)bannerModels{
+    
+    if (!_bannerModels) {
+        _bannerModels = [NSMutableArray array];
+    }
+    
+    return _bannerModels;
+}
 
 -(void)viewWillAppear:(BOOL)animated{
 
@@ -45,7 +50,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"logo"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:nil action:nil];
     self.collectionView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 44-64);
     [self.collectionView registerClass:[SectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_HEADERSECTION];
     [self.collectionView registerClass:[BannerHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_BANNERSECTION];
@@ -59,6 +64,7 @@
         
         NSArray *data = responseObject[@"data"];
         [data enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"%@",obj[@"gameIds"]);
             [self.headerViewTitles addObject:[NSString stringWithFormat:@"%@",obj[@"title"]]];
             [weakSelf addListData:obj[@"lists"]];
         }];
@@ -113,7 +119,11 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    ZQGameDetailModel *model = self.dataSource[indexPath.section][indexPath.row];
+    ZQLiveRoomController *live = [[ZQLiveRoomController alloc]init];
+    live.hidesBottomBarWhenPushed = YES;
+    live.vid = model.videoId;
+    [self.navigationController pushViewController:live animated:YES];
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     if (section == 0) {
@@ -132,13 +142,12 @@ viewForSupplementaryElementOfKind:(NSString *)kind
         if (indexPath.section ==0) {
             
             BannerHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_BANNERSECTION forIndexPath:indexPath];
-            
             reusableview = headerView;
             [self setBanner:headerView];
             
         }else{
             SectionHeaderView *headerView =[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:IDENTIFIER_HEADERSECTION forIndexPath:indexPath];
-            
+            headerView.delegate = self;
             [headerView fillHeaderViewWithTitle:self.headerViewTitles[indexPath.section]];
             
             reusableview = headerView;
@@ -147,24 +156,37 @@ viewForSupplementaryElementOfKind:(NSString *)kind
     return reusableview;
 }
 
+#pragma mark 端头右边小箭头点击事件
+-(void)didClickMoreBtn:(UIButton *)moreBtn{
+
+    QLog(@"123");
+}
+
+#pragma mark 广告轮播器点击
+-(void)didSelectAdWithIndex:(NSInteger)index{
+    BannerModel *model = self.bannerModels[index];
+    ZQLiveRoomController *live = [[ZQLiveRoomController alloc]init];
+    live.vid = model.room.videoId;
+    [self.navigationController pushViewController:live animated:YES];
+    
+}
+
 #pragma mark 初始化轮播广告
 -(void)setBanner:(BannerHeaderView *)reusableView{
-    self.bannerImages = [NSMutableArray array];
-    self.bannerTitles = [NSMutableArray array];
+    
+    WEAKSELF(weakSelf)
     [_ZQHttpTool getBannerDataWithSuccesed:^(ZQHttpTool *manager, id responseObject) {
-        
         NSArray *data = responseObject[@"data"];
         [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
            BannerModel*model = [BannerModel mj_objectWithKeyValues:obj];
-            [self.banners addObject:model];
             
-            [self.bannerTitles addObject:model.title];
-            [self.bannerImages addObject:model.spic];
+            [self.bannerModels addObject:model];
         }];
         
-        [reusableView fillBannerHeaderViewWithImages:self.bannerImages titles:self.bannerTitles selectedBlock:^(NSInteger index) {
+        [reusableView fillBannerHeaderViewWithBannerModels:self.bannerModels selectedBlock:^(NSInteger itemIndex) {
+           
+            [weakSelf didSelectAdWithIndex:itemIndex];
             
-            QLog(@"%ld",index);
         }];
         
     } faild:^(ZQHttpTool *manager, NSError *error) {
@@ -172,5 +194,7 @@ viewForSupplementaryElementOfKind:(NSString *)kind
         QLog(@"%@",error);
     }];
 }
+
+
 
 @end

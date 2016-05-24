@@ -90,6 +90,7 @@
                                                        titleHighlightedColor, NSForegroundColorAttributeName,
                                                        nil] forState:UIControlStateSelected];
     
+    
     [self addChildViewController:nav];
     
 }

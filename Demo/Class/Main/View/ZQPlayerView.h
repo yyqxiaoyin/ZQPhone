@@ -20,4 +20,6 @@ typedef void(^screenHandle)();
 
 -(void)didClickedbackBtnHandle:(backHandle)hadle;
 
+-(void)didClickedFullScreenBtnHandle:(screenHandle)handle;
+
 @end

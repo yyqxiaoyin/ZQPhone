@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BannerModel.h"
 
 @interface BannerHeaderView : UICollectionReusableView
 
--(void)fillBannerHeaderViewWithImages:(NSArray *)images titles:(NSArray *)titles selectedBlock:(void (^)(NSInteger itemIndex))SelectedBlock;
+-(void)fillBannerHeaderViewWithBannerModels:(NSArray *)models selectedBlock:(void (^)(NSInteger itemIndex))SelectedBlock;
 
 @end

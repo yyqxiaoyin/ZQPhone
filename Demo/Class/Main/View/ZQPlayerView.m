@@ -30,6 +30,8 @@
 
 @property (nonatomic ,copy)backHandle backHandle;
 
+@property (nonatomic ,copy)screenHandle fullScreenHandle;
+
 @end
 
 @implementation ZQPlayerView
@@ -83,10 +85,17 @@
 
     self.backHandle = [hadle copy];
 }
+-(void)didClickedFullScreenBtnHandle:(screenHandle)handle{
+
+    self.fullScreenHandle = [handle copy];
+}
 
 #pragma mark - 全屏按钮
 -(void)fullScreenBtnClick{
 
+    if (_fullScreenHandle) {
+        _fullScreenHandle();
+    }
 }
 
 #pragma mark - 返回按钮
@@ -94,7 +103,7 @@
 
     if (_backHandle) {
         _backHandle();
-        _backHandle = nil;
+        
     }
 }
 
@@ -158,6 +167,8 @@
 
     [self.player pause];
     self.player = nil;
+    _backHandle = nil;
+    _fullScreenHandle = nil;
     self.playerItem = nil;
     self.playerLayer = nil;
 }
